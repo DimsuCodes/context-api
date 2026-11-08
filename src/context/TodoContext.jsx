@@ -24,5 +24,6 @@ function todoReducer(state, action){
 }
 export function TodoProvider({children}){
     const [todos, dispatch] = useReducer(todoReducer,[]);
-    return <TodoContext.Provider value={{ todos }}>{children}</TodoContext.Provider>;
+    const deleteTodo = (id) => dispatch({ "DELETE_TODO": deleteTodo.id, payload: id });
+    return <TodoContext.Provider value={{ todos, deleteTodo }}>{children}</TodoContext.Provider>;
 }
