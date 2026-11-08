@@ -1,6 +1,9 @@
 import { createContext, useReducer } from 'react'
 export const TodoContext = createContext() //created channel
 
+
+//the reducer
+//the helper function
 function todoReducer(state, action){
 
     switch(action.type){
@@ -18,4 +21,8 @@ function todoReducer(state, action){
     }
 
 
+}
+export function TodoProvider({children}){
+    const [todos, dispatch] = useReducer(todoReducer,[]);
+    return <TodoContext.Provider value={{ todos }}>{children}</TodoContext.Provider>;
 }
