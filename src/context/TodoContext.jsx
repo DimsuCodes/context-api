@@ -8,9 +8,9 @@ function todoReducer(state, action){
         case "DELETE_TODO":
             return state.filter((todo) => todo.id !== action.payload);
         case "TOGGLE_TODO":
-            return state;
+            return state.map((todo) => todo.id === action.payload ? {...todo, completed : !todo.completed}: todo);
         case "EDIT_TODO":
-            return state;
+            return state.map((todo) => todo.id === action.payload.id ? {...todo, text: action.payload.text} : todo);
         case "CLEAR_COMPLETED":
             return state.filter((todo) => !todo.completed);
         default: return state;
