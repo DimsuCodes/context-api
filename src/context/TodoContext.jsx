@@ -12,7 +12,7 @@ function todoReducer(state, action){
         case "EDIT_TODO":
             return state;
         case "CLEAR_COMPLETED":
-            return state;
+            return state.filter((todo) => !todo.completed);
         default: return state;
     }
 
