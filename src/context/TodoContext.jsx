@@ -1,4 +1,5 @@
-
+import { createContext, useReducer } from 'react'
+export const TodoContext = createContext() //created channel
 
 function todoReducer(state, action){
 
@@ -16,5 +17,5 @@ function todoReducer(state, action){
         default: return state;
     }
 
-    
+
 }
