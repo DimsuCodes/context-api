@@ -3,11 +3,11 @@
 function todoReducer(state, action){
 
     switch(action.type){
-        case "ADD_TODO":
-            return state;
-        case "TOGGLE_TODO":
-            return state;
+        case "ADD_TODO": 
+             return [...state, action.payload]; //todo array;
         case "DELETE_TODO":
+            return state.filter((todo) => todo.id !== action.payload);
+        case "TOGGLE_TODO":
             return state;
         case "EDIT_TODO":
             return state;
@@ -15,4 +15,6 @@ function todoReducer(state, action){
             return state;
         default: return state;
     }
+
+    
 }
