@@ -27,5 +27,10 @@ export function TodoProvider({children}){
                                         //type: "DELETE_TODO" = says what job to do | payload:id = says which todo
     const deleteTodo = (id) => dispatch({ type: "DELETE_TODO", payload: id });
     const toggleTodo = (id) => dispatch ({type: "TOGGLE_TODO", payload: id});
-    return <TodoContext.Provider value={{ todos, deleteTodo, toggleTodo }}>{children}</TodoContext.Provider>;
+    const clearCompleted = () => dispatch({type: "CLEAR_COMPLETED"})
+    //payload is a small box holding two things: id = which todo | text = the new words (reducer reads action.payload.id and action.payload.text)
+    const editTodo = (id, newText) => dispatch({type: "EDIT_TODO", payload: {id: id, text: newText} })
+    const addTodo = (text) =>  dispatchg({type: "ADD_TODO", payload: {id: Date.now(), text: text, completed: false}})
+    return <TodoContext.Provider value={{ todos, deleteTodo, toggleTodo, clearCompleted, editTodo, addTodo }}>{children}</TodoContext.Provider>;
 }
+
