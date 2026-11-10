@@ -2,16 +2,14 @@ import { useContext } from 'react'
 import { TodoContext } from '../context/TodoContext'
 
 export default function TodoList(){
-
-    //connecting the wifi and to pull from out of the todos
-    {todos.map((todo) => <li key={todo.id}>{todo.text}</li>)}
+    //connecting to the wifi and pulling out the todos
+    const { todos } = useContext(TodoContext);
 
     return (
         <div>
             <ul>
-                
+                {todos.map((todo) => <li key={todo.id}>{todo.text}</li>)}
             </ul>
         </div>
     )
-
 }

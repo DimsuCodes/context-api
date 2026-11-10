@@ -5,6 +5,7 @@ export default function App(){
         <div>
             <h1>Todo App</h1>
             <TodoInput/>
+            <TodoList />
         </div>
     )
 }
