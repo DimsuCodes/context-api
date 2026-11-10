@@ -1,7 +1,6 @@
 import FilterButtons from "./components/FilterButtons";
 import TodoInput from "./components/TodoInput";
 import TodoList from "./components/TodoList";
-import { FilterContext } from "./context/FilterContext";
 
 export default function App(){
     return(
@@ -10,7 +9,6 @@ export default function App(){
             <TodoInput/>
             <FilterButtons />
             <TodoList/>
-            <FilterContext/>
         </div>
     )
 }
