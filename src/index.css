@@ -109,3 +109,27 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+
+/* Theme colors: App's main div gets "app light" or "app dark" */
+.app {
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.app.light {
+  background: #ffffff;
+  color: #1f2937;
+}
+
+.app.dark {
+  background: #16171d;
+  color: #f3f4f6;
+}
+
+.app.dark h1 {
+  color: #f3f4f6;
+}
+
+.app.light h1 {
+  color: #1f2937;
+}
