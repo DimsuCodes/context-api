@@ -1,5 +1,6 @@
 import { useContext } from 'react'
 import { TodoContext } from '../context/TodoContext'
+import TodoItem from './TodoItem'
 
 export default function TodoList(){
     //connecting to the wifi and pulling out the todos
@@ -8,7 +9,7 @@ export default function TodoList(){
     return (
         <div>
             <ul>
-                {todos.map((todo) => <li key={todo.id}>{todo.text}</li>)} {/*so that our todos show on screen */}
+                {todos.map((todo) => <TodoItem key={todo.id} todo={todo} />)} {/*so that our todos show on screen */}
             </ul>
         </div>
     )
