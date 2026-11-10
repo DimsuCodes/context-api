@@ -1,3 +1,4 @@
+//DISCLAIMER: this whole file was written by Claude (AI)
 import { useContext } from 'react'
 import { FilterContext } from '../context/FilterContext'
 

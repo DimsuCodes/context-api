@@ -1,3 +1,23 @@
+## AI Disclaimer
+
+I wrote most of this project myself with step-by-step coaching from Claude (AI). These parts were written by Claude, not by me:
+
+**Saving (`localStorage`) and optimization**
+- `loadTodos`, the `useEffect` that saves todos, and the `useMemo` and `useCallback` in `src/context/TodoContext.jsx`
+
+**Theme**
+- The theme code in `src/App.jsx` (reading the theme and adding it as a class)
+- Wrapping the app in `ThemeProvider` in `src/main.jsx`
+- The theme colors at the bottom of `src/index.css`
+
+**Filter**
+- All of `src/components/FilterButtons.jsx`
+- The filtering code in `src/components/TodoList.jsx` (connecting to `FilterContext` and `visibleTodos`)
+
+**Other help**
+- Claude showed me the full layout of `src/components/TodoList.jsx` when I got stuck, and I typed it in.
+- Some explanation comments in `TodoInput.jsx`, `main.jsx` and `TodoContext.jsx` were added by Claude.
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
